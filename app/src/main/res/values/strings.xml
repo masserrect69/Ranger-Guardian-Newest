@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ford Guardian</string>
+    <string name="notification_channel_name">OBD Service</string>
+    <string name="notification_channel_desc">Ford Guardian OBD-II monitoring service</string>
+</resources>
