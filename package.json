@@ -1,0 +1,20 @@
+{
+  "name": "ford-guardian-ranger-brain",
+  "version": "19.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "knowledge:setup": "node setup-knowledge.mjs",
+    "token:generate": "node tools/generate-client-token.mjs",
+    "check": "node --check server.mjs && node --check setup-knowledge.mjs && node --check tools/fetch-public-ford-sources.mjs && node --check tools/generate-client-token.mjs",
+    "knowledge:fetch-public": "node tools/fetch-public-ford-sources.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "openai": "7.1.0"
+  }
+}

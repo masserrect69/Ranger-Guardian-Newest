@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: ford-guardian-ranger-brain
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /v1/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-5.1
+      - key: OPENAI_REASONING_EFFORT
+        value: medium
+      - key: FORD_RANGER_VECTOR_STORE_ID
+        sync: false
+      - key: FORD_GUARDIAN_CLIENT_TOKEN
+        sync: false
+      - key: OFFICIAL_WEB_SEARCH
+        value: "true"
+      - key: OFFICIAL_WEB_SEARCH_CONTEXT
+        value: medium
+      - key: MAX_REQUESTS_PER_MINUTE
+        value: "30"
+      - key: MAX_HISTORY_MESSAGES
+        value: "20"
+      - key: MAX_OUTPUT_TOKENS
+        value: "2200"
